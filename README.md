@@ -95,7 +95,7 @@ Pruned unnecessary searches when fewer than 10 results were returned.
 
 
 ## Total Number of Records fetch
-**14284**
+**10649**
 
 ## Total Number of API calls Using Recursive Approach
 **18278**
