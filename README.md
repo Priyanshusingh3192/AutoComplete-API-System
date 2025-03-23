@@ -92,3 +92,10 @@ Tested with different prefix lengths to fine-tune the depth limit.
 Added **exponential backoff** to improve stability.
 
 Pruned unnecessary searches when fewer than 10 results were returned.
+
+
+## Total Number of Records fetch
+**14284**
+
+## Total Number of API calls Using Recursive Approach
+**18278**
