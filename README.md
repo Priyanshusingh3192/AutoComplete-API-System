@@ -98,7 +98,7 @@ Pruned unnecessary searches when fewer than 10 results were returned.
 **10649**
 
 ## Total Number of API calls Using Recursive Approach
-**18278**
+**20278 , Due to Exponential Backoff when 429 Error and Recursive Approach Number of API Request are more.**
 
 # OUTPUT
 ## Output for query = "a"
