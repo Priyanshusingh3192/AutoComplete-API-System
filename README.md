@@ -52,7 +52,7 @@ Used a set (found_names) to store unique names, ensuring duplicates are ignored.
 This prevents unnecessary processing and saves memory.
 
 ## 3. Code Quality and Efficiency
-#### Optimized Recursive Search
+### Optimized Recursive Search
 The recursive function only expands a prefix when necessary, minimizing API calls.
 
 The depth-first approach ensures that deeper prefixes are only explored if required.
