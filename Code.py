@@ -7,7 +7,7 @@ BASE_URL = "http://35.200.185.69:8000/v1/autocomplete?query="
 MAX_RESULTS = 10
 BASE_DELAY = 0.5  
 # Removed the space from CHAR_SET to avoid generating prefixes like "aa ".
-CHAR_SET = string.ascii_lowercase + string.ascii_uppercase + "-'"
+CHAR_SET = string.ascii_lowercase
 
 found_names = set()
 total_requests = 0
