@@ -1,31 +1,29 @@
-# AutoComplete-API-System
-Autocomplete API Scraper - Detailed Documentation
+# AutoComplete-API-System - Detailed Documentation
 
 
-**1. Systematic Approach to Discovering API Behavior**
+## 1. Systematic Approach to Discovering API Behavior
+
 To understand how the API functions, I used a systematic and exploratory approach:
 
-**Step 1: Initial API Testing**
+**Step 1: Initial API Testing :**
 I started by querying the API with an empty prefix ("") to see how it responds and after that i queried diff prefixes like - "a", "aa", "aab", "abc" etc.
-
 I Observed that the API returns a maximum of 10 results per query.
-
 I Noted that if fewer than 10 names are returned, no further names exist with that prefix.
 
-**Step 2: Incremental Prefix Expansion**
+**Step 2: Incremental Prefix Expansion using Recursion :**
 Since the API supports prefix-based search, I designed a **recursive function** that extends prefixes only when necessary.
 
 If an API query returns exactly 10 results, it suggests that there may be more names under that prefix, so further exploration is required and for further I used Recursive Approach.
 
-Step 3: Understanding API Constraints
+**Step 3: Understanding API Constraints :**
 The API enforces rate limiting (429 Too Many Requests).
 
 Some names returned do not strictly match the requested prefix, requiring additional filtering.
 
 API responses need proper error handling to avoid crashes due to JSON parsing issues.
 
-**2. Handling Various Constraints and Limitations**
-Rate Limiting and Exponential Backoff
+## 2. Handling Various Constraints and Limitations
+**Rate Limiting and Exponential Backoff**
 If the API returns a 429 error, I implemented an exponential backoff strategy:
 
 First retry: Wait base delay (0.5s) before retrying.
@@ -53,7 +51,7 @@ Used a set (found_names) to store unique names, ensuring duplicates are ignored.
 
 This prevents unnecessary processing and saves memory.
 
-**3. Code Quality and Efficiency**
+## 3. Code Quality and Efficiency
 Optimized Recursive Search
 The recursive function only expands a prefix when necessary, minimizing API calls.
 
@@ -71,7 +69,7 @@ Clear logging of discovered names and request counts for tracking progress.
 
 Proper use of global variables (total_requests, found_names) to maintain efficiency.
 
-**4. Problem-Solving Process**
+## 4. Problem-Solving Process
 
 **Step 1:** Identifying the Core Problem
 The challenge was to retrieve all unique names from the API while handling rate limits and unknown constraints.
