@@ -3,7 +3,7 @@ Autocomplete API Scraper - Detailed Documentation
 
 
 **1. Systematic Approach to Discovering API Behavior**
-To understand how the API functions, I adopted a systematic and exploratory approach:
+To understand how the API functions, I used a systematic and exploratory approach:
 
 **Step 1: Initial API Testing**
 I started by querying the API with an empty prefix ("") to see how it responds and after that i queried diff prefixes like - "a", "aa", "aab", "abc" etc.
@@ -72,15 +72,15 @@ Clear logging of discovered names and request counts for tracking progress.
 Proper use of global variables (total_requests, found_names) to maintain efficiency.
 
 **4. Problem-Solving Process**
-Step 1: Identifying the Core Problem
+**Step 1:** Identifying the Core Problem
 The challenge was to retrieve all unique names from the API while handling rate limits and unknown constraints.
 
-Step 2: Designing a Recursive Solution
+**Step 2:** Designing a Recursive Solution
 Instead of brute-force querying, I designed a recursive prefix-based approach to efficiently explore possible name variations.
 
 The trie-like traversal structure ensures optimal coverage without redundant queries.
 
-Step 3: Implementing and Testing
+**Step 3:** Implementing and Testing
 Initially implemented a simple API query and analyzed response behavior.
 
 Added recursion for prefix expansion, ensuring efficient discovery.
@@ -89,7 +89,7 @@ Implemented rate limit handling to avoid excessive failures.
 
 Tested with different prefix lengths to fine-tune the depth limit.
 
-Step 4: Refinements and Optimizations
+**Step 4:** Refinements and Optimizations
 Added **exponential backoff** to improve stability.
 
 Pruned unnecessary searches when fewer than 10 results were returned.
