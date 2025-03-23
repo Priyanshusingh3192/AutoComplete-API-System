@@ -72,6 +72,7 @@ Clear logging of discovered names and request counts for tracking progress.
 Proper use of global variables (total_requests, found_names) to maintain efficiency.
 
 **4. Problem-Solving Process**
+
 **Step 1:** Identifying the Core Problem
 The challenge was to retrieve all unique names from the API while handling rate limits and unknown constraints.
 
